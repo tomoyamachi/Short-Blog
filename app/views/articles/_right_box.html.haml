@@ -1,0 +1,22 @@
+- if @blog
+  = link_to 'Write new article', new_article_path
+  = link_to "Logout" , {:controller => "blogs", :action => "signout"}
+
+- else
+  = link_to "Login", {:controller => "blogs", :action => "login"}
+%br
+%br
+%h1 Recently Articles
+.option
+  - @articles.each do |article|
+    = article.created_at.in_time_zone('Tokyo').strftime("%m/%d")
+    = link_to article.title,article
+    %br
+
+%br
+
+%h1 Categories
+.option
+  - @categories.each do |c|
+    = link_to c.name, c
+    (1)

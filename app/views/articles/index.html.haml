@@ -1,0 +1,16 @@
+- @articles.each do |article|
+  .article-title= article.title
+  .article-category
+    In :
+    - article.categories.each do |c|
+      = link_to c.name,c
+
+  .article-desc= br(article.description.slice(0..250)) + "..."
+  .article-opt
+    = link_to 'More', article
+    \|
+    = link_to '>> edit', edit_article_path(article)
+    \|
+    = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
+
+
