@@ -1,0 +1,17 @@
+- @articles.each do |article|
+  .article-title= link_to article.title, article
+  .article-category
+    In :
+    - article.categories.each do |c|
+      = link_to c.name,c
+
+  .article-desc= br(article.description)
+  - if @blog
+    .article-opt
+      = link_to 'More', article
+      \|
+      = link_to '>> edit', edit_article_path(article)
+      \|
+      = link_to 'Destroy', {:action => 'destroy',:id => article.id}, :confirm => 'Are you sure?', :method => :delete
+
+= paginate @articles

@@ -321,7 +321,8 @@ input.ta {
 
 .article-title {
   font-size: 25px;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-top: 10px; }
   .article-title a {
     text-decoration: none;
     color: #333333; }
@@ -349,7 +350,7 @@ input.ta {
 
 .pagination {
   float: right;
-  font-size: 10px;
+  font-size: 13px;
   color: #999999; }
   .pagination a {
     text-decoration: none;

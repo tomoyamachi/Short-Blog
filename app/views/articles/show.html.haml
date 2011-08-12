@@ -1,8 +1,14 @@
 %p#notice= notice
 
 %h1.article-title= @article.title
+.article-category
+  In :
+  - article.categories.each do |c|
+    = link_to c.name,c
+
 %p.article-desc= br(@article.description)
 
-= link_to 'Edit', edit_article_path(@article)
-\|
-= link_to 'Back', articles_path
+- if @blog
+  = link_to 'Edit', edit_article_path(@article)
+  \|
+  = link_to 'Back', articles_path

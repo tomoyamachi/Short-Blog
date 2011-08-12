@@ -164,7 +164,7 @@ $right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2
     textarea.ta {width: $left-wrapper-width;height: 50px;margin-bottom:20px;}
     input.ta {width: $left-wrapper-width;margin-bottom:20px;}
 
-    .article-title {font-size: 25px;font-weight: bold;
+    .article-title {font-size: 25px;font-weight: bold;padding-top: 10px;
       a{text-decoration: none;color: #333333;}
         }
     .article-desc {padding: 10px 0px 10px 10px;}
@@ -174,7 +174,7 @@ $right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2
     .option{padding: 10px 0 0 10px;color:black;
       p{padding-top:5px;}
         }
-    .pagination{float: right;font-size: 10px;color:#999999;
+    .pagination{float: right;font-size: 13px;color:#999999;
       a{text-decoration: none;color: $pink;}
         }
     .category-title{padding-bottom:20px;font-size: 25px;font-weight: bold;
