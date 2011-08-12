@@ -1,9 +1,9 @@
 class BlogsController < ApplicationController
-  before_filter :confirm_owner, :except => [:login, :signin]
+  before_filter :confirm_owner, :except => [:login, :signin, :signout]
   # GET /blogs
   # GET /blogs.xml
   def confirm_owner
-    if Blog.find(1)
+    if Blog.all.size > 0
       redirect_to '/'
     end
   end
