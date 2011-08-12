@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   def get_infos
     @articles = Article.all
     @categories = Category.all
-    if session['blog']
-      @blog = Blog.find(session['blog'])
+    if session[:blog]
+      @blog = Blog.find(session[:blog])
     end
   rescue
     reset_session

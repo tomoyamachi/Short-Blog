@@ -9,14 +9,15 @@ class BlogsController < ApplicationController
   end
   def signin
     if Blog.authenticate(params[:mail], params[:password])
-      session["blog"] = Blog.authenticate(params[:mail], params[:password])
+      session[:blog] = Blog.authenticate(params[:mail], params[:password])
       redirect_to "/"
     else
       redirect_to(:action => "login")
     end
   end
   def signout
-    reset_session
+    p "Blog#signout"
+    sereset_session
     redirect_to "/"
   end
   def index

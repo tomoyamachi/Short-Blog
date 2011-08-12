@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
-  before_filter :confirm_admin, :except => [:index,:show]
+  before_filter :confirm_admin, :except => [:index,:show,:destroy]
   def index
+    p @blog
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
@@ -31,11 +32,14 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params[:article])
-    @category = Category.find(params[:categories].to_i)
-    if @category
-      @article.categories << @category
-      @category.article_num = @article.categories.size
-      @category.save
+    begin
+      @category = Category.find(params[:categories].to_i)
+      if @category
+        @article.categories << @category
+        @category.article_num = @article.categories.size + 1
+        @category.save
+      end
+    rescue
     end
 
     respond_to do |format|
@@ -51,7 +55,15 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    @article.categories << Category.find(params[:categories].to_i)
+    begin
+      @category = Category.find(params[:categories].to_i)
+      if @category
+        @article.categories << @category
+        @category.article_num = @article.categories.size + 1
+        @category.save
+      end
+    rescue
+    end
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
@@ -65,10 +77,10 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
+    @article.delete
 
     respond_to do |format|
-      format.html { redirect_to(articles_url) }
+      format.html { redirect_to "/" }
       format.xml  { head :ok }
     end
   end

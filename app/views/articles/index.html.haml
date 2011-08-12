@@ -12,6 +12,6 @@
       \|
       = link_to '>> edit', edit_article_path(article)
       \|
-      = link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete
+      = link_to 'Destroy', {:action => 'destroy',:id => article.id}, :confirm => 'Are you sure?', :method => :delete
 
 
