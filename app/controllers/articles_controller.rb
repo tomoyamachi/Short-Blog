@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
     @category = Category.find(params[:categories].to_i)
     if @category
       @article.categories << @category
-      @category.article_num += 1
+      @category.article_num = @article.categories.size
       @category.save
     end
 
