@@ -16,8 +16,7 @@ class BlogsController < ApplicationController
     end
   end
   def signout
-    p "Blog#signout"
-    sereset_session
+    reset_session
     redirect_to "/"
   end
   def index

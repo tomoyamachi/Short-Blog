@@ -174,3 +174,9 @@ $right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2
     .option{padding: 10px 0 0 10px;color:black;
       p{padding-top:5px;}
         }
+    .pagination{float: right;font-size: 10px;color:#999999;
+      a{text-decoration: none;color: $pink;}
+        }
+    .category-title{padding-bottom:20px;font-size: 25px;font-weight: bold;
+      a{color: $pink;text-decoration: none;}
+        }

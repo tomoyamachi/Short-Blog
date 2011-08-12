@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.xml
   def show
     @category = Category.find(params[:id])
-
+    @category_articles = @category.articles.order('created_at DESC').page(params[:page]).per(5)
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @category }
@@ -26,7 +26,6 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @category = Category.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @category }

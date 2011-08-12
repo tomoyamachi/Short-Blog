@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
   before_filter :confirm_admin, :except => [:index,:show,:destroy]
   def index
-    p @blog
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
@@ -32,16 +31,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params[:article])
-    begin
-      @category = Category.find(params[:categories].to_i)
-      if @category
-        @article.categories << @category
-        @category.article_num = @article.categories.size + 1
-        @category.save
-      end
-    rescue
-    end
-
+    add_category_to_article(1)
     respond_to do |format|
       if @article.save
         format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
@@ -55,15 +45,7 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    begin
-      @category = Category.find(params[:categories].to_i)
-      if @category
-        @article.categories << @category
-        @category.article_num = @article.categories.size + 1
-        @category.save
-      end
-    rescue
-    end
+    add_category_to_article(0)
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
@@ -82,6 +64,18 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to "/" }
       format.xml  { head :ok }
+    end
+  end
+  private
+  def add_category_to_article(when_create_add_one)
+    begin
+      @category = Category.find(params[:categories].to_i)
+      if @category
+        @article.categories << @category
+        @category.article_num = @category.articles.size + when_create_add_one
+        @category.save
+      end
+    rescue
     end
   end
 end

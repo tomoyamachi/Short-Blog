@@ -9,6 +9,7 @@ gem 'mysql2','<0.3'
 gem 'haml-rails'
 gem 'sass'
 gem 'rake'
+gem 'kaminari'
 # Use unicorn as the web server
 # gem 'unicorn'
 

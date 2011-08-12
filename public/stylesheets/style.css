@@ -346,3 +346,19 @@ input.ta {
   color: black; }
   .option p {
     padding-top: 5px; }
+
+.pagination {
+  float: right;
+  font-size: 10px;
+  color: #999999; }
+  .pagination a {
+    text-decoration: none;
+    color: #fd0cb6; }
+
+.category-title {
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold; }
+  .category-title a {
+    color: #fd0cb6;
+    text-decoration: none; }

@@ -1,6 +1,6 @@
 %h1 Recently Articles
 .option
-  - @articles.each do |article|
+  - Article.limit(10).each do |article|
     = article.created_at.in_time_zone('Tokyo').strftime("%m/%d")
     = link_to article.title,article
     %br

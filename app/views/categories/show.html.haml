@@ -1,13 +1,16 @@
 %p#notice= notice
 - if @category.name
-  %h1.article-title= link_to "Category : " + @category.name, edit_category_path(@category)
+  %h1.category-title= link_to "Category : " + @category.name, edit_category_path(@category)
 - else
-  %h1.article-title= link_to "Edit name",edit_category_path(@category)
+  %h1.category-title= link_to "Edit name",edit_category_path(@category)
 
-- @category.articles.each do |article|
-  %h1.article-title= article.title
-  .article-desc= br(article.description.slice(0..250)) + "..."
-  .article-opt
-    = link_to 'More', article
-    \|
-    = link_to '>> edit', edit_article_path(article)
+- @category_articles.each do |article|
+  %h1.article-title= link_to article.title, article
+  .article-desc= br(article.description.slice(0..140)) + "..."
+  - if @blog
+    .article-opt
+      = link_to 'More', article
+      \|
+      = link_to '>> edit', edit_article_path(article)
+
+= paginate @category_articles
