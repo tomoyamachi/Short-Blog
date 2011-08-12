@@ -1,13 +1,18 @@
 class BlogsController < ApplicationController
-  # skip_before_filter :get_session, :only => 'index'
+  before_filter :confirm_owner, :except => [:login, :signin]
   # GET /blogs
   # GET /blogs.xml
+  def confirm_owner
+    if Blog.find(1)
+      redirect_to '/'
+    end
+  end
   def signin
     if Blog.authenticate(params[:mail], params[:password])
       session["blog"] = Blog.authenticate(params[:mail], params[:password])
       redirect_to "/"
     else
-      redirect_to(:action => "login", :alert => "Miss!!")
+      redirect_to(:action => "login")
     end
   end
   def signout

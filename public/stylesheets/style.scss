@@ -60,14 +60,18 @@ $pink: #FD0CB6;
                &:hover{color:white;background: #FD0CB6;}
              }
            }
+   .admin{float: right;margin-right: 10px;margin-top: 30px;color:$pink;
+     a{color: $pink}
+     }
+
 
 	.header ul.nav{float:right;
-          li{display:block;float:left;font-size:12px;font-weight:bold;height:49px;margin:0 6px;text-align:center;_width:1px;_white-space:nowrap;
-            a{color:#999;display:block;height:38px;text-decoration:none;
-              &:hover{color:#000;}
-              span{display:block;height:26px;padding:11px 9px 1px 9px;}}
-            }
-            }
+        li{display:block;float:left;font-size:12px;font-weight:bold;height:49px;margin:0 6px;text-align:center;_width:1px;_white-space:nowrap;
+          a{color:#999;display:block;height:38px;text-decoration:none;
+            &:hover{color:#000;}
+            span{display:block;height:26px;padding:11px 9px 1px 9px;}}
+          }
+          }
    ul.t_archive{margin:10px 0 0 0;
                 li{font-size:.8em;margin:5px 0 0 20px;}}
 
@@ -160,7 +164,9 @@ $right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2
     textarea.ta {width: $left-wrapper-width;height: 50px;margin-bottom:20px;}
     input.ta {width: $left-wrapper-width;margin-bottom:20px;}
 
-    .article-title {font-size: 25px;font-weight: bold;}
+    .article-title {font-size: 25px;font-weight: bold;
+      a{text-decoration: none;color: #333333;}
+        }
     .article-desc {padding: 10px 0px 10px 10px;}
     .article-opt {font-size: 9px;padding-bottom: 20px;}
     .right-box {background: $pink + 150;border-radius: 7px;margin-top:20px;}

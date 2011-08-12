@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_filter :confirm_admin, :except => [:show]
   # GET /categories
   # GET /categories.xml
   def index

@@ -7,5 +7,10 @@ class ApplicationController < ActionController::Base
     if session['blog']
       @blog = Blog.find(session['blog'])
     end
+  rescue
+    reset_session
+  end
+  def confirm_admin
+    redirect_to "/" unless @blog
   end
 end

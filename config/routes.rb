@@ -7,9 +7,9 @@ Myblog::Application.routes.draw do
   # first created -> highest priority.
 
   # Sample of regular route:
-  match 'blogs/login' => 'blogs#login'
-  match 'blogs/signin' => 'blogs#signin'
-  match 'blogs/signout' => 'blogs#signout'
+  match 'login' => 'blogs#login'
+  match 'signin' => 'blogs#signin'
+  match 'signout' => 'blogs#signout'
   resources :blogs
 
   # Keep in mind you can assign values other than :controller and :action

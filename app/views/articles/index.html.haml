@@ -1,5 +1,5 @@
 - @articles.each do |article|
-  .article-title= article.title
+  .article-title= link_to article.title, article
   .article-category
     In :
     - article.categories.each do |c|
