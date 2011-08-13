@@ -1,14 +1,13 @@
-%h1 Recently Articles
-.option
-  - Article.limit(10).each do |article|
-    = article.created_at.in_time_zone('Tokyo').strftime("%m/%d")
-    = link_to article.title,article
-    %br
-
-%br
 
 %h1 Categories
 .option
   - @categories.each do |c|
     = link_to c.name, c
     = "(#{c.article_num})"
+%br
+%h1 Recently Articles
+.option
+  - Article.limit(50).select('id,title').each do |article|
+    -#= article.created_at.in_time_zone('Tokyo').strftime("%m/%d")
+    = link_to article.title,article
+    %br
