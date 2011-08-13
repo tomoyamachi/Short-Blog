@@ -339,13 +339,16 @@ input.ta {
   background: #ffa2ff;
   border-radius: 7px;
   margin-top: 20px; }
+  .right-box a {
+    color: #333333; }
 
 .bl {
   height: 20px; }
 
 .option {
   padding: 10px 0 0 10px;
-  color: black; }
+  color: black;
+  line-height: 15px; }
   .option p {
     padding-top: 5px; }
 

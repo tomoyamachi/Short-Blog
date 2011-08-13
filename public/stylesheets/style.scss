@@ -169,9 +169,10 @@ $right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2
         }
     .article-desc {padding: 10px 0px 10px 10px;line-height:18px;}
     .article-opt {font-size: 9px;padding-bottom: 20px;}
-    .right-box {background: $pink + 150;border-radius: 7px;margin-top:20px;}
+    .right-box {background: $pink + 150;border-radius: 7px;margin-top:20px;
+            a{color: #333333;}}
       .bl {height:20px;}
-    .option{padding: 10px 0 0 10px;color:black;
+    .option{padding: 10px 0 0 10px;color:black;line-height:15px;
       p{padding-top:5px;}
         }
     .pagination{float: right;font-size: 13px;color:#999999;
