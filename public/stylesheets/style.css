@@ -328,7 +328,8 @@ input.ta {
     color: #333333; }
 
 .article-desc {
-  padding: 10px 0px 10px 10px; }
+  padding: 10px 0px 10px 10px;
+  line-height: 18px; }
 
 .article-opt {
   font-size: 9px;

@@ -167,7 +167,7 @@ $right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2
     .article-title {font-size: 25px;font-weight: bold;padding-top: 10px;
       a{text-decoration: none;color: #333333;}
         }
-    .article-desc {padding: 10px 0px 10px 10px;}
+    .article-desc {padding: 10px 0px 10px 10px;line-height:18px;}
     .article-opt {font-size: 9px;padding-bottom: 20px;}
     .right-box {background: $pink + 150;border-radius: 7px;margin-top:20px;}
       .bl {height:20px;}
