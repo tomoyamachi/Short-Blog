@@ -197,7 +197,7 @@ ul.t_archive {
 
 #right .pagination {
   font-size: 13px;
-  margin-right: 40px; }
+  margin: 10px 40px 0 0; }
   #right .pagination a {
     color: black; }
 
