@@ -90,6 +90,7 @@ $pink: #FD0CB6;
       font-size: 12px;
       position: relative;
       width: 100%;
+      margin-bottom:150px;
   }
   .footer1, .footer2, .footer3 {
       float: left;
@@ -100,69 +101,6 @@ $pink: #FD0CB6;
       float: left;
       width: 350px;
   }
-
-
-    /* ここまで */
-
-
-
-  $selected-color: #f35df3;
-  $disable-color: #999999;
-  $calendar-text-color: #333333;
-  $calendar-padding: 0 10px 20px 0;
-  $twit-width: 8 * 58 + 30px;
-   .twit{width: $twit-width ;height:385px;margin:20px 0;float:left;
-     .fl{padding: 0px;border: 5px solid #FF0000;}
-         img{padding:5px;width:48px;height:48px;}
-         .form_img{display:inline;}
-           input{padding:5px;width:48px;height:48px;
-             &:hover{padding:0px;border: 5px solid #FFBD00;}}
-         }
-  .calendar{width:385px;height:385px;float:left;
-              ul{width:385px;list-style:none;font-family:georgia;font-size:26px;display:block;
-              .day{display:block;font-variant:small-caps;font-size:13px;background:#cccccc;height:15px;font-family:helvetica,arial;text-align:center;color:ff0000;}
-              .today-li{background-color:#ffff00;
-                &:hover{background-color:#ff0000;}
-                a{color: $calendar-text-color;text-decoration:none;display:block;padding: $calendar-padding;}}
-              .selectable-date{
-                &:hover{background-color:#ff0000;}
-                a{color: $calendar-text-color;text-decoration:none;display:block;padding: $calendar-padding}}
-              .selected-date{background: $selected-color;}
-              .past-date{background: $disable-color;}
-
-              li{width:45px;float:left;height:45px;background:#cccccc;margin:2px;padding:3px;font-family:georgia;
-              span{font-size:11px;dispay:block;color:#666;}
-              }}
-  }
-
-  .sun{color:#ff0000;}
-  .sat{color:#2B6DBC;}
-  .kill_left_space{width:95px;height:400px;float:left;}
-
-$left-wrapper-width: 575px;
-$right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2);
-
-    /* .left-wrapper {margin:70px 0 0 0;width: $left-wrapper-width;float:left;} */
-    .left-wrapper {margin:0 auto;width: $left-wrapper-width;text-align:left;}
-    .twit-left-wrapper {margin:0 auto;width: $twit-width + (95 * 2);text-align:left;}
-    .right-wrapper{width: $right-wrapper-width;float:left;
-      img{width:$right-wrapper-width;}}
-    .right-part{p{font-size: 15px;}
-      ul{font-size: 12px;}
-      li{list-style:square;margin:10px 0 0 $left-wrapper-width + 200px;}}
-    .hub-wrapper{width: $right-wrapper-width;float: right;
-      p{padding:5px;}
-      img{padding:5px;width:48px;height:48px;}
-      .login_btn{padding: 5px;width: 151px;height:24px}
-      h2{font-size: 16px;font-weight: bold;padding: 10px 0 0 0;}}
-/* 75 20 385 20 75  */
-    .scroller-prev {float:left;cursor:pointer;margin-right:20px;margin-top:175px;}
-    .scroller-next {float:left;cursor:pointer;margin-left:20px;margin-top:175px;}
-    .regi-btn {float:right;margin-right:95px;}
-    #tw_oauth {text-align:center;border-top:solid 1px #ddd;border-bottom:solid 1px #ddd;padding:150px 0;background:#f2f2f2;margin:50px 0;}
-    .edit-hub {padding:20px 0;}
-    textarea.ta {width: $left-wrapper-width;height: 50px;margin-bottom:20px;}
-    input.ta {width: $left-wrapper-width;margin-bottom:20px;}
 
     .article-title {font-size: 25px;font-weight: bold;padding-top: 10px;
       a{text-decoration: none;color: #333333;}
@@ -177,6 +115,11 @@ $right-wrapper-width: $content-width - (($content-width + $left-wrapper-width)/2
         }
     .pagination{float: right;font-size: 13px;color:#999999;
       a{text-decoration: none;color: $pink;}
+        }
+    #right{
+      .pagination{font-size: 13px;margin-right:40px;
+        a{color: black;}
+          }
         }
     .category-title{padding-bottom:20px;font-size: 25px;font-weight: bold;
       a{color: $pink;text-decoration: none;}

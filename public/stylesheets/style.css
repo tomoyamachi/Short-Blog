@@ -142,7 +142,8 @@ ul.t_archive {
   clear: both;
   font-size: 12px;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 150px; }
 
 .footer1, .footer2, .footer3 {
   float: left;
@@ -152,172 +153,6 @@ ul.t_archive {
 .footer4 {
   float: left;
   width: 350px; }
-
-/* ここまで */
-.twit {
-  width: 494px;
-  height: 385px;
-  margin: 20px 0;
-  float: left; }
-  .twit .fl {
-    padding: 0px;
-    border: 5px solid #FF0000; }
-  .twit img {
-    padding: 5px;
-    width: 48px;
-    height: 48px; }
-  .twit .form_img {
-    display: inline; }
-  .twit input {
-    padding: 5px;
-    width: 48px;
-    height: 48px; }
-    .twit input:hover {
-      padding: 0px;
-      border: 5px solid #FFBD00; }
-
-.calendar {
-  width: 385px;
-  height: 385px;
-  float: left; }
-  .calendar ul {
-    width: 385px;
-    list-style: none;
-    font-family: georgia;
-    font-size: 26px;
-    display: block; }
-    .calendar ul .day {
-      display: block;
-      font-variant: small-caps;
-      font-size: 13px;
-      background: #cccccc;
-      height: 15px;
-      font-family: helvetica,arial;
-      text-align: center;
-      color: ff0000; }
-    .calendar ul .today-li {
-      background-color: #ffff00; }
-      .calendar ul .today-li:hover {
-        background-color: #ff0000; }
-      .calendar ul .today-li a {
-        color: #333333;
-        text-decoration: none;
-        display: block;
-        padding: 0 10px 20px 0; }
-    .calendar ul .selectable-date:hover {
-      background-color: #ff0000; }
-    .calendar ul .selectable-date a {
-      color: #333333;
-      text-decoration: none;
-      display: block;
-      padding: 0 10px 20px 0; }
-    .calendar ul .selected-date {
-      background: #f35df3; }
-    .calendar ul .past-date {
-      background: #999999; }
-    .calendar ul li {
-      width: 45px;
-      float: left;
-      height: 45px;
-      background: #cccccc;
-      margin: 2px;
-      padding: 3px;
-      font-family: georgia; }
-      .calendar ul li span {
-        font-size: 11px;
-        dispay: block;
-        color: #666; }
-
-.sun {
-  color: #ff0000; }
-
-.sat {
-  color: #2B6DBC; }
-
-.kill_left_space {
-  width: 95px;
-  height: 400px;
-  float: left; }
-
-/* .left-wrapper {margin:70px 0 0 0;width: $left-wrapper-width;float:left;} */
-.left-wrapper {
-  margin: 0 auto;
-  width: 575px;
-  text-align: left; }
-
-.twit-left-wrapper {
-  margin: 0 auto;
-  width: 684px;
-  text-align: left; }
-
-.right-wrapper {
-  width: 192.5px;
-  float: left; }
-  .right-wrapper img {
-    width: 192.5px; }
-
-.right-part p {
-  font-size: 15px; }
-.right-part ul {
-  font-size: 12px; }
-.right-part li {
-  list-style: square;
-  margin: 10px 0 0 775px; }
-
-.hub-wrapper {
-  width: 192.5px;
-  float: right; }
-  .hub-wrapper p {
-    padding: 5px; }
-  .hub-wrapper img {
-    padding: 5px;
-    width: 48px;
-    height: 48px; }
-  .hub-wrapper .login_btn {
-    padding: 5px;
-    width: 151px;
-    height: 24px; }
-  .hub-wrapper h2 {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 0 0 0; }
-
-/* 75 20 385 20 75  */
-.scroller-prev {
-  float: left;
-  cursor: pointer;
-  margin-right: 20px;
-  margin-top: 175px; }
-
-.scroller-next {
-  float: left;
-  cursor: pointer;
-  margin-left: 20px;
-  margin-top: 175px; }
-
-.regi-btn {
-  float: right;
-  margin-right: 95px; }
-
-#tw_oauth {
-  text-align: center;
-  border-top: solid 1px #ddd;
-  border-bottom: solid 1px #ddd;
-  padding: 150px 0;
-  background: #f2f2f2;
-  margin: 50px 0; }
-
-.edit-hub {
-  padding: 20px 0; }
-
-textarea.ta {
-  width: 575px;
-  height: 50px;
-  margin-bottom: 20px; }
-
-input.ta {
-  width: 575px;
-  margin-bottom: 20px; }
 
 .article-title {
   font-size: 25px;
@@ -359,6 +194,12 @@ input.ta {
   .pagination a {
     text-decoration: none;
     color: #fd0cb6; }
+
+#right .pagination {
+  font-size: 13px;
+  margin-right: 40px; }
+  #right .pagination a {
+    color: black; }
 
 .category-title {
   padding-bottom: 20px;

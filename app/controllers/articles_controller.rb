@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_filter :confirm_admin, :except => [:index,:show,:destroy]
   def index
+    @articles = Article.page params[:page]
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
