@@ -5,7 +5,8 @@
   In :
   - @article.categories.each do |c|
     = link_to c.name,c
-
+    &nbsp;&nbsp;Chars :
+    = @article.description.size
 %p.article-desc= br(@article.description)
 
 - if @blog

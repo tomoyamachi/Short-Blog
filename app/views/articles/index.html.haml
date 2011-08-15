@@ -4,7 +4,8 @@
     In :
     - article.categories.each do |c|
       = link_to c.name,c
-
+    &nbsp;&nbsp;Chars :
+    = article.description.size
   .article-desc= br(article.description)
   - if @blog
     .article-opt
